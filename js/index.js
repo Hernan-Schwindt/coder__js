@@ -1,55 +1,51 @@
 do {
-    let usuario = prompt("ingrese su nombre de usuario")
-    let gmail = prompt("ingrese su gmail")
-    let contraseña = prompt("ingrese contraseña")
-    function datos_ingresados_f(){
+    usuario = prompt("ingrese su nombre de usuario")
+    gmail = prompt("ingrese su gmail")
+    pass = prompt("ingrese contraseña")
 
-        datos_ingresados = confirm("estos son tus datos?" + "\n" 
-        + "usuario : " + usuario + "\n" 
-        + "gmail : " + gmail + "\n" 
-        + "contraseña : " + contraseña)
-        
-        if(((usuario == "") && (gmail == "") && (contraseña == "")) 
-        || ((usuario !== "") && (gmail !== "") && (contraseña == "")) 
-        || ((usuario !== "") && (gmail == "") && (contraseña !== ""))
-        || ((usuario == "") && (gmail !== "") && (contraseña !== ""))
-        || ((usuario == "") && (gmail == "") && (contraseña !== ""))
-        || ((usuario !== "") && (gmail == "") && (contraseña == ""))
-        || ((usuario == "") && (gmail !== "") && (contraseña == ""))){
-            alert("ERROR \n \n falta ingresar datos para seguir con el registro")
-        } 
-    }
-    if ((usuario !== "") && (gmail !== "") && (contraseña !== "")) {
+    if ((usuario !== "") && (gmail !== "") && (pass !== "")) {
         datos_ingresados_f();
-    }else if ((usuario !== "") && (gmail !== "") && (contraseña == "")){
+    } else if ((usuario !== "") && (gmail !== "") && (pass == "")) {
         alert("no añadio una contraseña")
-        contraseña = prompt("ingrese contraseña")
+        pass = prompt("ingrese contraseña")
         datos_ingresados_f();
-    }else if ((usuario !== "") && (gmail == "") && (contraseña !== "")){
+    } else if ((usuario !== "") && (gmail == "") && (pass !== "")) {
         alert("no añadio el gmail")
         gmail = prompt("ingrese su gmail")
         datos_ingresados_f();
-    }else if ((usuario == "") && (gmail !== "") && (contraseña !== "")){
+    } else if ((usuario == "") && (gmail !== "") && (pass !== "")) {
         alert("no añadio el nombre de usuario")
         usuario = prompt("ingrese su nombre de usuario")
         datos_ingresados_f();
-    }else if ((usuario == "") && (gmail == "") && (contraseña !== "")){
+    } else if ((usuario == "") && (gmail == "") && (pass !== "")) {
         alert("no añadio el nombre de usuario ni el gmail")
         usuario = prompt("ingrese su nombre de usuario")
         gmail = prompt("ingrese su gmail")
         datos_ingresados_f();
-    }else if ((usuario !== "") && (gmail == "") && (contraseña == "")){
+    } else if ((usuario !== "") && (gmail == "") && (pass == "")) {
         alert("no añadio la contraseña ni el gmail")
-        contraseña = prompt("ingrese contraseña")
+        pass = prompt("ingrese contraseña")
         gmail = prompt("ingrese su gmail")
         datos_ingresados_f();
-    }else if ((usuario == "") && (gmail !== "") && (contraseña == "")){
+    } else if ((usuario == "") && (gmail !== "") && (pass == "")) {
         alert("no añadio la contraseña ni su nombre de usuario")
-        contraseña = prompt("ingrese contraseña")
+        pass = prompt("ingrese contraseña")
         usuario = prompt("ingrese su nombre de usuario")
         datos_ingresados_f();
-    }else{
+    } else {
         datos_ingresados_f();
     }
-} while (!datos_ingresados)
-//si ahi alguna forma de achicar esto plis digame xD da un poquito de asco a la vista
+
+    userReturnUser();
+    userReturngmail();
+    if(userReturnUser()){
+        alert("tonto user")
+    }
+    if(userReturngmail()){
+        alert("tonto gmail")
+    }
+    if(!userReturnUser() && !userReturngmail()){
+        arrayUser.push(user = new Users(usuario, gmail, pass));
+        console.log(arrayUser);
+    }
+} while (!datos_ingresados);
