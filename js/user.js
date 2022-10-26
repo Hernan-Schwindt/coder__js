@@ -12,6 +12,7 @@ class Users {
         this.pass = pass;
     }
 }
+
 function userReturnUser(){
     const is = arrayUser.filter(p=> p.user === usuario) 
     if(is != false){
@@ -55,35 +56,3 @@ function datos_ingresados_f() {
         alert("ERROR \n \n falta ingresar datos para seguir con el registro")
     }
 }
-// let arrayUser=[];/
-// let user_l = "user";/
-// let user_new = "";/
-// let user_n = 0;/
-// let user_suma = "";/
-// let nick = 0;/
-// let gmail = 0;/
-// let pass = 0;/
-
-// function User(nick, gmail, pass) {
-//     this.nick = nick;
-//     this.gmail = gmail;
-//     this.pass = pass;
-// };/
-
-// function data() {
-//     nick = prompt("nombre de usuario");
-//     gmail = prompt("ingrese su gmail");
-//     pass = prompt("ingrese pass")
-// }
-// do {
-//     data()
-//     user_suma = ("_" + (user_n++));
-
-//     if (nick !== "" || gmail !== "" || pass !== "") {
-//         user_new = (user_l + user_suma)
-
-//     }
-//     arrayUser.push(user_new = new User(nick, gmail, pass))
-
-//     console.log(arrayUser)
-// } while (nick !== "" || gmail !== "" || pass !== "")

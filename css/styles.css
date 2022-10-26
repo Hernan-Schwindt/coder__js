@@ -1,6 +1,25 @@
-body{
-    background-color: #292929;
-}
-h2,p{
-    color: white;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+body {
+  width: 100%; }
+  body header {
+    width: 100%;
+    position: absolute; }
+    body header div {
+      height: 56px; }
+  body .sectionHome button {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none; }
+  body main img {
+    width: 100%;
+    background-color: #22222296; }
+
+img {
+  width: 100%; }
