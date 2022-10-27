@@ -4,22 +4,84 @@
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif; }
 
+a {
+  text-decoration: none; }
+
 body {
   width: 100%; }
   body header {
     width: 100%;
-    position: absolute; }
+    position: fixed;
+    z-index: 50;
+    transition: 0.8s; }
     body header div {
       height: 56px; }
+      body header div nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        body header div nav h1 a b {
+          color: black; }
+        body header div nav div {
+          width: 50%; }
+          body header div nav div ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            height: 100%;
+            width: 100%;
+            justify-content: space-evenly; }
+            body header div nav div ul li a {
+              color: black; }
+            body header div nav div ul .userNew {
+              display: none; }
+  body .abajo {
+    background-color: red; }
+  body .sectionHome div {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    filter: brightness(60%); }
+    body .sectionHome div img {
+      background-color: antiquewhite;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover; }
   body .sectionHome button {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px;
     border-radius: 20px;
     border: none; }
-  body main img {
-    width: 100%;
-    background-color: #22222296; }
-
-img {
-  width: 100%; }
+  body main .compra {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    body main .compra .imgBackground {
+      height: 100vh;
+      width: 100%;
+      overflow: hidden; }
+      body main .compra .imgBackground img {
+        height: 100vh;
+        width: 100%;
+        filter: brightness(60%);
+        object-fit: cover; }
+    body main .compra .boxItems {
+      background-color: #ffffff8d;
+      width: 80%;
+      height: 80%;
+      border-radius: 20px;
+      position: absolute; }
+  body #nosotros {
+    display: flex;
+    align-items: center; }
+    body #nosotros .imgBackground {
+      width: 100%;
+      overflow: hidden; }
+      body #nosotros .imgBackground img {
+        height: 100vh;
+        width: 100%;
+        filter: brightness(60%);
+        object-fit: cover; }
+    body #nosotros .textNosotros {
+      position: absolute; }
