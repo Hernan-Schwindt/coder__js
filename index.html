@@ -14,58 +14,66 @@
         <div>
             <nav>
                 <h1>
-                    <a href="">
+                    <a href="#sectionHome">
                         <b>el restaurante en tu mesa</b>
                     </a>
                 </h1>
                 <div>
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="#sectionHome">
                                 <b>Home</b>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="#compraProductos">
                                 <b>Productos</b>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="#formBox">
                                 <b>Footer</b>
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <b>Registrate</b>
+                            <a href="#formBox">
+                                <b>Login</b>
                             </a>
                         </li>
                         <!-- aca va el usuario cuando se registre -->
-                        <li class="userNew"></li>
+                        <li id="userNew"></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <section class="sectionHome">
+    <section id="sectionHome">
         <div class="boxHomeImg">
             <img src="img/Index/pizza.jpg" alt="imagen inicio de pizza">
         </div>
         <h2></h2>
         <div class="boxButton">
-            <button><b>ver Productos</b></button>
+            <a href="#compraProductos">
+                <button><b>ver Productos</b></button>
+            </a>
         </div>
         <div class="boxTrolley">
             <img src="img/Index/trolley.png" alt="img de carrito">
         </div>
     </section>
-    <main>
+    <main id="compraProductos">
         <div class="compra">
             <div class="imgBackground">
                 <img src="img/Index/burger.jpg" alt="imagen de el main de compra">
             </div>
             <div class="boxItems">
                 <div class="items">
+                    <div>
+                        <h3></h3>
+                        <img src="img/productos/burger-4641173.jpg" alt="">
+                        <p></p>
+                        <a href=""></a>
+                    </div>
 
                 </div>
             </div>
@@ -84,38 +92,59 @@
             </p>
         </div>
     </section>
-    <section class="form">
+    <section class="form" id="formBox">
         <div>
             <div class="boxForm">
-                <form action="" id="formulario" class="formulario">
+                <form action="" id="form" class="formu formNone">
                     <fieldset>
                         <h2><b>REGISTRARSE</b></h2>
                         <div class="apellido-nombre">
-                            <input type="text" placeholder=" nick">
+                            <input type="text" placeholder=" nick" id="addNick">
                         </div>
                         <div class="mail">
-                            <input type="email" placeholder="Gmail">
-                            <select name="pais" id="">
-                                <option value="Argentina">Argentina</option>
-                                <option value="peru">peru</option>
-                                <option value="chile">chile</option>
-                                <option value="españa">españa</option>
-                            </select>
+                            <input type="email" placeholder="Gmail" id="addGmail" required>
                             <div class="password">
-                                <input type="password" placeholder=" CONTRASEÑA">
-                                <input type="password" placeholder=" REPETIR CONTRASEÑA" class="repetir-password">
+                                <input type="password" placeholder=" CONTRASEÑA" id="addPass">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="ponga la URL de su avatar" id="addImg">
                             </div>
 
                         </div>
-                        <div class="box-enviar">
-                            <input type="submit" name="" id="" class="form-enviar" placeholder="enviar">
+                        <button id="addSubmit" type="button">enviar</button>
+                        <div>
+                            <button id="irLogin" type="button"><b>login</b></button>
                         </div>
                     </fieldset>
-                    <nav>
-                        <ul class="faltaDatos">
+                    <nav id="faltaDatosLogin">
+                        <ul>
 
                         </ul>
                     </nav>
+                </form>
+                <form action="" id="login" class="formu">
+                    <fieldset>
+                        <h2><b>Login</b></h2>
+                        <div class="apellido-nombre">
+                            <input type="text" placeholder=" nick" id="loginNick">
+                        </div>
+                        <div class="mail">
+                            <input type="email" placeholder="Gmail" id="loginGmail" required>
+                            <div class="password">
+                                <input type="password" placeholder=" CONTRASEÑA" id="loginPass">
+                            </div>
+                        </div>
+                        <button id="loginSubmit" type="button">ingresar</button>
+                        <div>
+                            <button id="irRegister" type="button"><b>Registrarse</b></button>
+                        </div>
+                        <nav id="faltaDatosRegister">
+                            <ul >
+    
+                            </ul>
+                        </nav>
+                    </fieldset>
+                    
                 </form>
             </div>
         </div>
