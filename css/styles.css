@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif; }
+  box-sizing: border-box; }
 
 a {
   text-decoration: none; }
@@ -21,7 +20,7 @@ body {
         justify-content: space-around;
         align-items: center; }
         body header div nav h1 a b {
-          color: black; }
+          color: #ffffff; }
         body header div nav div {
           width: 50%; }
           body header div nav div ul {
@@ -32,33 +31,55 @@ body {
             width: 100%;
             justify-content: space-evenly; }
             body header div nav div ul li a {
-              color: black; }
+              color: #ffffff; }
             body header div nav div ul .userNew {
               display: none; }
   body .abajo {
-    background-color: red; }
-  body .sectionHome div {
-    height: 80vh;
+    background-color: #ff0000; }
+    body .abajo div nav h1 a b {
+      color: black; }
+    body .abajo div nav div ul li a {
+      color: black; }
+  body .sectionHome .boxHomeImg {
+    height: 75vh;
     width: 100%;
     overflow: hidden;
     filter: brightness(60%); }
-    body .sectionHome div img {
+    body .sectionHome .boxHomeImg img {
       background-color: antiquewhite;
       width: 100%;
       height: 100vh;
       object-fit: cover; }
-  body .sectionHome button {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 20px;
-    border: none; }
+  body .sectionHome .boxButton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 25vh; }
+    body .sectionHome .boxButton button {
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      border: none; }
+  body .sectionHome .boxTrolley {
+    background-color: #ff0000;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 50; }
+    body .sectionHome .boxTrolley img {
+      width: 50%;
+      margin: 15px; }
   body main .compra {
     display: flex;
     align-items: center;
     justify-content: center; }
     body main .compra .imgBackground {
-      height: 100vh;
+      height: calc(100vh - 56px);
       width: 100%;
       overflow: hidden; }
       body main .compra .imgBackground img {
@@ -85,3 +106,33 @@ body {
         object-fit: cover; }
     body #nosotros .textNosotros {
       position: absolute; }
+  body .form {
+    width: 100%;
+    height: calc(82vh - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    body .form div .boxForm .formulario {
+      display: flex;
+      align-items: center; }
+  body footer {
+    background-color: #ff0000;
+    height: 18vh;
+    width: 100%; }
+    body footer div .siguenos {
+      text-align: center; }
+      body footer div .siguenos h3 {
+        padding-top: 10px; }
+      body footer div .siguenos nav ul li {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        margin-top: 10px; }
+        body footer div .siguenos nav ul li a {
+          color: black; }
+    body footer div .small {
+      text-align: center;
+      height: 20px; }
+      body footer div .small small {
+        text-align: center; }
