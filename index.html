@@ -92,10 +92,10 @@
             </p>
         </div>
     </section>
-    <section class="form" id="formBox">
+    <section class="forms" id="formBox">
         <div>
             <div class="boxForm">
-                <form action="" id="form" class="formu formNone">
+                <form action="" id="formAdd" class="formNone">
                     <fieldset>
                         <h2><b>REGISTRARSE</b></h2>
                         <div class="apellido-nombre">
@@ -116,13 +116,13 @@
                             <button id="irLogin" type="button"><b>login</b></button>
                         </div>
                     </fieldset>
-                    <nav id="faltaDatosLogin">
+                    <nav id="faltaDatosRegister">
                         <ul>
 
                         </ul>
                     </nav>
                 </form>
-                <form action="" id="login" class="formu">
+                <form action="" id="formLogin">
                     <fieldset>
                         <h2><b>Login</b></h2>
                         <div class="apellido-nombre">
@@ -138,17 +138,45 @@
                         <div>
                             <button id="irRegister" type="button"><b>Registrarse</b></button>
                         </div>
-                        <nav id="faltaDatosRegister">
-                            <ul >
-    
-                            </ul>
-                        </nav>
                     </fieldset>
-                    
+                    <nav id="faltaDatosLogin">
+                        <ul>
+
+                        </ul>
+                    </nav>
+
                 </form>
             </div>
         </div>
     </section>
+    <div class="modal">
+        <div class="trolley">
+            <div class="titleBox">
+                <div class="titleCart">
+                    <h3>Carrito</h3>
+                    <i class="icino-x fa-solid fa-xmark" id="trolleyX"></i>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>Nombre</li>
+                        <li>Cantidad</li>
+                        <li>precio</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-square-minus fa-2x"></i>
+            </div>
+            <div class="footerTrolley">
+                <ul>
+                    <li>Total a pagar :</li>
+                    <li><b>$ 0</b></li>
+                </ul>
+                <input type="number" value="1">
+            </div>
+
+        </div>
+    </div>
     <footer class="footer-regis">
         <div>
             <div class="siguenos">
@@ -168,7 +196,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <!-- font -->
+    <script src="https://kit.fontawesome.com/f32ba75cef.js" crossorigin="anonymous"></script>
     <script src="js/user.js"></script>
     <script src="js/index.js"></script>
 </body>

@@ -61,7 +61,8 @@ body {
       color: #ffffff;
       padding: 20px;
       border-radius: 20px;
-      border: none; }
+      border: none;
+      cursor: pointer; }
   body #sectionHome .boxTrolley {
     background-color: #ff0000;
     width: 60px;
@@ -70,7 +71,8 @@ body {
     position: fixed;
     bottom: 5px;
     right: 5px;
-    z-index: 50; }
+    z-index: 50;
+    cursor: pointer; }
     body #sectionHome .boxTrolley img {
       width: 50%;
       margin: 15px; }
@@ -98,7 +100,8 @@ body {
         body main .compra .boxItems .items div {
           width: 200px;
           height: 200px;
-          border-radius: 20px; }
+          border-radius: 20px;
+          padding: 20px; }
           body main .compra .boxItems .items div img {
             width: 100%;
             object-fit: cover; }
@@ -115,22 +118,67 @@ body {
         object-fit: cover; }
     body #nosotros .textNosotros {
       position: absolute; }
-  body .form {
+  body .forms {
     width: 100%;
     height: calc(82vh - 56px);
     display: flex;
     align-items: center;
     justify-content: center; }
-    body .form div .boxForm .formu {
+    body .forms div .boxForm form {
       display: flex;
       align-items: center;
       flex-direction: column; }
-      body .form div .boxForm .formu fieldset {
+      body .forms div .boxForm form fieldset {
         display: flex;
         flex-direction: column;
         align-items: center; }
-    body .form div .boxForm .formNone {
+    body .forms div .boxForm .formNone {
       display: none; }
+  body .modal {
+    background: linear-gradient(#22222296, #22222296);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    display: none; }
+    body .modal .trolley {
+      height: 90vh;
+      width: 60%;
+      background-color: #ffffff;
+      border-start-start-radius: 30px;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+      body .modal .trolley .titleBox .titleCart {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+        body .modal .trolley .titleBox .titleCart h3 {
+          margin-left: 20px;
+          font-size: 30px; }
+        body .modal .trolley .titleBox .titleCart i {
+          color: #363636;
+          font-size: 30px; }
+      body .modal .trolley .titleBox .col {
+        margin: 5px; }
+        body .modal .trolley .titleBox .col ul {
+          display: flex;
+          justify-content: space-between;
+          list-style: none; }
+      body .modal .trolley .footerTrolley {
+        position: absolute;
+        bottom: 5px;
+        width: 100%; }
+        body .modal .trolley .footerTrolley ul {
+          display: flex;
+          list-style: none;
+          justify-content: space-between; }
+          body .modal .trolley .footerTrolley ul li {
+            font-size: 20px; }
+  body .modalView {
+    display: inline-block; }
   body footer {
     background-color: #ff0000;
     height: 18vh;

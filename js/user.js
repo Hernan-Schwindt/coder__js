@@ -1,15 +1,20 @@
 let arrayUser = [];
 // ! REGISTER
+
 let addNick = document.getElementById("addNick").value;
 let addGmail = document.getElementById("addGmail").value;
 let addPass = document.getElementById("addPass").value;
 let addImg = document.getElementById("addImg").value;
-let addSubmit = document.getElementById("addSubmit");
+const addSubmit = document.getElementById("addSubmit");
+const irLogin = document.getElementById("irLogin");
+
 //   ! login
+
 let loginNick = document.getElementById("loginNick").value;
 let loginGmail = document.getElementById("loginGmail").value;
 let loginPass = document.getElementById("loginPass").value;
-let loginSubmit = document.getElementById("loginSubmit");
+const loginSubmit = document.getElementById("loginSubmit");
+const irRegister = document.getElementById("irRegister");
 
 let faltaDatosRegister = document.getElementById("faltaDatosRegister");
 let faltaDatosLogin = document.getElementById("faltaDatosLogin");
@@ -40,7 +45,36 @@ class Users {
         this.img = img;
     }
 }
+// ! click de cambio login a register
+function buttomUser(){
+    document.getElementById("formAdd").classList.toggle ("formNone");
+    document.getElementById("formLogin").classList.toggle ("formNone");
+}
 
+// !  LOGIN                            login completo
+function userReturnUserLogin() {
+    let loginNick = document.getElementById("loginNick").value;
+    let loginGmail = document.getElementById("loginGmail").value;
+    let loginPass = document.getElementById("loginPass").value;
+
+    let user = arrayUser.find(u => u.user === loginNick)
+
+    let email = arrayUser.find(g => g.gmail === loginGmail)
+
+    let passs = arrayUser.find(p => p.pass === loginPass)
+    if (passs === email && user === email) {
+        return user;
+    }
+    if (passs != email && email === user) {
+        return false;
+    }
+    if (email != passs && email != user) {
+        return false;
+    }
+    if(user != passs && user != email){
+        return false;
+    }
+}
 // !   USER
 function userReturnUser() {
     let addNick = document.getElementById("addNick").value;
@@ -57,24 +91,6 @@ function userReturnUser() {
         return false;
     }
 
-}
-// !  LOGIN                            login completo
-function userReturnUserLogin() {
-    let loginNick = document.getElementById("loginNick").value;
-    let loginGmail = document.getElementById("loginGmail").value;
-    let loginPass = document.getElementById("loginPass").value;
-
-    const user = arrayUser.find(u => u.user === loginNick)
-
-    const email = arrayUser.find(g => g.gmail === loginGmail)
-
-    const passs = arrayUser.find(p => p.pass === loginPass)
-    if (passs === email && user === email){
-        console.log("hola como estas");
-    }
-    if (passs != email && email === user){
-        alert("contraseña incorrecta")
-    }
 }
 
 // !   GMAIL
@@ -109,8 +125,14 @@ function userNEW() {
 }
 
 function resetForm() {
+    // ! registro
     document.getElementById("addNick").value = "";
     document.getElementById("addGmail").value = "";
     document.getElementById("addPass").value = "";
     document.getElementById("addImg").value = "";
+    // ! login
+    document.getElementById("loginNick").value = "";
+    document.getElementById("loginGmail").value = "";
+    document.getElementById("loginPass").value = "";
 }
+
