@@ -13,20 +13,8 @@ irLogin.addEventListener("click", () => {
 })
 
 
-// //     !   verifica los datos q sean iguales
-// loginSubmit.addEventListener("click", () => {
-
-//   if (returnNuwrLogin()) {
-
-//     resetForm();
-//     console.log("funca")
-//   };
-//   if (userReturnUserLogin()) {
 
 
-//     alert("se encontro su usuario")
-//   };
-// });
 // ! registro
 
 addSubmit.addEventListener("click", () => {
@@ -57,16 +45,17 @@ loginSubmit.addEventListener("click", () => {
 });
 
 
-function verificador(nick, gmail) {
-  let user = arrayUser.find(u => u.user === nick.value);
+function verificador() {
+  let user = arrayUser.find(u => u.user === addNick.value);
+  let user4 = user[4]
 
-  let email = arrayUser.find(g => g.gmail === gmail.value);
+  let email = arrayUser.find(g => g.gmail === addGmail.value);
 
-  if (user) {
+  if (user4 === true) {
     mostrarMensajeError("name", "Nombre en uso*");
     condicion = false;
   }
-  if (email) {
+  if (!email) {
     mostrarMensajeError("mail", "Correo ya en uso*");
     condicion = false;
   }
@@ -100,7 +89,7 @@ function validacionForm(form, nick, gmail, pass, input1, input2, input3, input4)
     condicion = false;
   }
 
-  //imgregistro();
+  imgRegistro();
 
   if (!terminosYcondiciones.checked) {
     mostrarMensajeError(input4, "Acepte*");
@@ -112,7 +101,7 @@ function validacionForm(form, nick, gmail, pass, input1, input2, input3, input4)
     alert("hola como estas")
   }
 
-  verificador(addNick, addGmail);
+  verificador();
   return condicion;
 
 };
@@ -127,7 +116,7 @@ function enviarFormulario(terminar) {
   terminar.lastElementChild.innerHTML = "Listo !!";
 };
 
-function imgregistro() {
+function imgRegistro() {
   if (addImg.value.length < 1 || addImg.value.trim() == "") {
     mostrarMensajeError("imgAvatar", "img no valido");
     condicion = false;
@@ -151,7 +140,9 @@ popUpCart.addEventListener("click", () => {
 trolleyX.addEventListener("click", () => {
   pullOutCart()
 })
+
 // ! productos añadidos tantyon en el main como en el carrito
+
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('trolley')){
       trolley = JSON.parse(localStorage.getItem('trolley'))
@@ -238,96 +229,3 @@ const actualizarCarrito = () => {
   
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function returnNuwrLogin() {
-//   faltaDatosLogin.innerHTML = "";
-
-//   let aviso = new Array();
-
-//   let loginNick = document.getElementById("loginNick").value;
-//   let loginGmail = document.getElementById("loginGmail").value;
-//   let loginPass = document.getElementById("loginPass").value;
-
-// let user = arrayUser.find(u => u.user === loginNick)
-
-// let email = arrayUser.find(g => g.gmail === loginGmail)
-
-// let passs = arrayUser.find(p => p.pass === loginPass)
-
-//   if (!loginNick) {
-//     aviso.push("ingresar nombre")
-//   }
-//   if (!loginGmail) {
-//     aviso.push("ingresar gmail")
-//   }
-//   if (!loginPass) {
-//     aviso.push("ingresar una contraseña")
-//   }
-//   //     !   datos de login verification
-//   if (passs === email && user === email) {
-//     console.log(passs)
-//     //return user;
-//   }
-// if (passs != email && email === user && passs != "") {
-//   aviso.push("contraseña incorrecta")
-// }
-// if (email != passs && email === user && email != "") {
-//   aviso.push("gmail incorecto")
-// }
-// if (user != email && user != "") {
-//   aviso.push("usuario incorrecto")
-// }
-//   if (aviso.length > 0) {
-//     let list = document.createElement("ul");
-//     list.textContent = "introdusca los datos faltantes";
-//     aviso.forEach(element => {
-
-//       list.appendChild(crearLi(element));
-//     })
-//     faltaDatosLogin.appendChild(list);
-//   }
-
-//   return aviso.length == 0;
-// }
-
-// // ! register

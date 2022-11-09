@@ -1,4 +1,3 @@
-let arrayUser = [];
 
 const formAdd = document.getElementById("formAdd");
 const formLogin = document.getElementById("formLogin")
@@ -58,6 +57,7 @@ function userReturnUserLogin() {
     console.log(user)
     function validarObjeto(){
         if (passs === email && user === email && terminosYcondiciones.checked) {
+            alert("hola mi vida")
             return user;
         }
         
@@ -87,7 +87,7 @@ function userNEW() {
     let addPass = document.getElementById("addPass").value;
     let addImg = document.getElementById("addImg").value;
 
-    arrayUser.push(new Users(addNick, addGmail, addPass, addImg));
+    arrayUser.push(new Users(addNick, addGmail, addPass, addImg, true));
     console.log(arrayUser)
     resetForm();
 }

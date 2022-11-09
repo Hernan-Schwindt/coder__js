@@ -100,6 +100,7 @@ body {
         width: 80%;
         height: 80%;
         border-radius: 20px;
+        overflow: scroll;
         position: absolute; }
         body main .compra .boxItems .items {
           display: flex;
@@ -112,6 +113,8 @@ body {
             body main .compra .boxItems .items div img {
               width: 100%;
               object-fit: cover; }
+      body main .compra .boxItems::-webkit-scrollbar {
+        display: none; }
   body #nosotros {
     display: flex;
     align-items: center; }
@@ -180,12 +183,16 @@ body {
           display: flex;
           justify-content: space-between;
           list-style: none; }
-      body .modal .trolley #itemsTrolley .productoEnCarrito {
-        display: flex;
-        justify-content: space-between;
-        padding: 5px; }
-        body .modal .trolley #itemsTrolley .productoEnCarrito .imgDescCarruto img {
-          width: 80px; }
+      body .modal .trolley #itemsTrolley {
+        overflow: scroll; }
+        body .modal .trolley #itemsTrolley .productoEnCarrito {
+          display: flex;
+          justify-content: space-between;
+          padding: 5px; }
+          body .modal .trolley #itemsTrolley .productoEnCarrito .imgDescCarruto img {
+            width: 80px; }
+      body .modal .trolley #itemsTrolley::-webkit-scrollbar {
+        display: none; }
       body .modal .trolley .footerTrolley {
         position: absolute;
         bottom: 5px;

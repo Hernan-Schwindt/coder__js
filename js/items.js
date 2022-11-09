@@ -12,10 +12,15 @@
 // https://cdn.inteligenciaviajera.com/wp-content/uploads/2020/03/Comidas-tipicas-de-argetina.jpg
 let stockProductos =[
     {id: 1, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'},
-    {id: 2, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'},
+    {id: 2, nombre: "hamburguesas", tipo: "hamburguesas", cantidad: 1, desc: "hamburguesas completa", precio: 800, img: 'img/productos/burger-4641173.jpg'},
     {id: 3, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'},
     {id: 4, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'},
     {id: 5, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'},
     {id: 6, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'},
     {id: 7, nombre: "pizza", tipo: "pizza", cantidad: 1, desc: "pizza con salamin", precio: 1200, img: 'https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa-945x630.jpg'}
 ]
+
+
+
+
+
