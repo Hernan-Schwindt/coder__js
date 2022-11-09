@@ -57,8 +57,9 @@
                 <button><b>ver Productos</b></button>
             </a>
         </div>
-        <div class="boxTrolley">
+        <div class="boxTrolley" id="popUpCart">
             <img src="img/Index/trolley.png" alt="img de carrito">
+            <span id="contadorCarrito">0</span>
         </div>
     </section>
     <main id="compraProductos">
@@ -67,7 +68,7 @@
                 <img src="img/Index/burger.jpg" alt="imagen de el main de compra">
             </div>
             <div class="boxItems">
-                <div class="items">
+                <div class="items" id="itemProducto">
                     <div>
                         <h3></h3>
                         <img src="img/productos/burger-4641173.jpg" alt="">
@@ -95,21 +96,34 @@
     <section class="forms" id="formBox">
         <div>
             <div class="boxForm">
-                <form action="" id="formAdd" class="formNone">
+                <form action="" id="formAdd" class="formNone form">
                     <fieldset>
                         <h2><b>REGISTRARSE</b></h2>
-                        <div class="apellido-nombre">
+                        <div class="name formInput">
                             <input type="text" placeholder=" nick" id="addNick">
+                            <label for="myname">Nombre</label>
+                            <p class="mensajeError"></p>
                         </div>
-                        <div class="mail">
+                        <div class="mail formInput">
                             <input type="email" placeholder="Gmail" id="addGmail" required>
-                            <div class="password">
-                                <input type="password" placeholder=" CONTRASEÑA" id="addPass">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="ponga la URL de su avatar" id="addImg">
-                            </div>
-
+                            <label for="email">Correo electrónico</label>
+                            <p class="mensajeError"></p>
+                        </div>
+                        <div class="password formInput">
+                            <input type="password" placeholder=" CONTRASEÑA" id="addPass">
+                            <label for="password">Contraseña</label>
+                            <p class="mensajeError"></p>
+                        </div>
+                        <div class="formInput imgAvatar">
+                            <input type="text" placeholder="ponga la URL de su avatar" id="addImg">
+                            <label for="password">url de avatar</label>
+                            <p class="mensajeError"></p>
+                        </div>
+                        <div class="form-termsAndConditions termsAndConditions">
+                            <input type="checkbox" id="termsAndConditions">
+                            <label for="termsAndConditions">He leído y acepto los </label>
+                            <a href="#">Términos y Condiciones</a>
+                            <p class="mensajeError"></p>
                         </div>
                         <button id="addSubmit" type="button">enviar</button>
                         <div>
@@ -122,23 +136,36 @@
                         </ul>
                     </nav>
                 </form>
-                <form action="" id="formLogin">
+                <form action="" id="formLogin" class="form">
                     <fieldset>
                         <h2><b>Login</b></h2>
-                        <div class="apellido-nombre">
+                        <div class="nameLogin formInput">
                             <input type="text" placeholder=" nick" id="loginNick">
+                            <label for="myname">Nombre</label>
+                            <p class="mensajeError"></p>
                         </div>
-                        <div class="mail">
+                        <div class="mailLogin formInput">
                             <input type="email" placeholder="Gmail" id="loginGmail" required>
-                            <div class="password">
-                                <input type="password" placeholder=" CONTRASEÑA" id="loginPass">
-                            </div>
+                            <label for="email">Correo electrónico</label>
+                            <p class="mensajeError"></p>
+                        </div>
+                        <div class="passwordLogin formInput">
+                            <input type="password" placeholder=" CONTRASEÑA" id="loginPass">
+                            <label for="password">Contraseña</label>
+                            <p class="mensajeError"></p>
+                        </div>
+                        <div class=" termsAndConditionsLogin">
+                            <input type="checkbox" id="termsAndConditionsLogin">
+                            <label for="termsAndConditionsLogin">He leído y acepto los </label>
+                            <a href="#">Términos y Condiciones</a>
+                            <p class="mensajeError"></p>
                         </div>
                         <button id="loginSubmit" type="button">ingresar</button>
                         <div>
                             <button id="irRegister" type="button"><b>Registrarse</b></button>
                         </div>
                     </fieldset>
+                    <p class="mensajeCorrecto"></p>
                     <nav id="faltaDatosLogin">
                         <ul>
 
@@ -149,7 +176,7 @@
             </div>
         </div>
     </section>
-    <div class="modal">
+    <div class="modal" id="modal">
         <div class="trolley">
             <div class="titleBox">
                 <div class="titleCart">
@@ -161,18 +188,22 @@
                         <li>Nombre</li>
                         <li>Cantidad</li>
                         <li>precio</li>
+                        <li>eliminar</li>
                     </ul>
                 </div>
             </div>
-            <div>
+            <div id="itemsTrolley">
                 <i class="fa-solid fa-square-minus fa-2x"></i>
             </div>
             <div class="footerTrolley">
                 <ul>
                     <li>Total a pagar :</li>
-                    <li><b>$ 0</b></li>
+                    <li>$ <b id="precioTotal">0</b></li>
                 </ul>
                 <input type="number" value="1">
+                <div>
+                    <button id="vaciarCarrito" class="botonAgregar">Vaciar carrito</button>
+                </div>
             </div>
 
         </div>
@@ -198,7 +229,11 @@
     </footer>
     <!-- font -->
     <script src="https://kit.fontawesome.com/f32ba75cef.js" crossorigin="anonymous"></script>
+    
+    <script src="js/items.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/user.js"></script>
+    <script src="js/users.js"></script>
     <script src="js/index.js"></script>
 </body>
 
